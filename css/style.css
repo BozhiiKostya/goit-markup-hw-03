@@ -14,6 +14,23 @@
 body {
   font-family: roboto, sans-serif;
 }
+/* --<reset styles>-- */
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* --</reset styles>-- */
 .link {
   text-decoration: none;
 }
@@ -21,7 +38,17 @@ body {
   list-style: none;
 }
 /* ----------------------HEADER------------------------------ */
+.header-page .conteiner {
+  display: flex;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px;
+}
+
 .logo {
+  display: block;
+  margin-right: 93px;
   font-family: Raleway;
   font-weight: bold;
   font-size: 26px;
@@ -30,14 +57,27 @@ body {
   color: var(--color-logotype);
 }
 .accent {
-  color: #2196f3;
+  color: var(--second-color-link);
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+.header-list {
+  display: flex;
 }
 .header-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--first-color-link);
+}
+.item:not(:last-child) {
+  margin-right: 50px;
 }
 .primery {
   color: var(--second-color-link);
@@ -47,7 +87,13 @@ body {
   color: var(--second-color-link);
 }
 
+.contacts-list {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
 .contacts-link {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -61,12 +107,19 @@ body {
 /* ----------------------HERO------------------------------ */
 .hero {
   background-color: var(--background-section);
+  text-align: center;
+}
+.hero .container {
+  width: 696px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-title {
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
@@ -85,7 +138,8 @@ body {
 .title-values {
   visibility: hidden;
 }
-.mini-title {
+.list-values .mini-title {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -94,6 +148,11 @@ body {
   color: var(--color-title-page);
 }
 .list-values {
+  display: flex;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px;
   font-family: Roboto;
   font-weight: normal;
   font-size: 14px;
@@ -101,7 +160,11 @@ body {
   letter-spacing: 0.03em;
   color: var(--color-text-page);
 }
+.list-values .link:not(:last-child) {
+  margin-right: 30px;
+}
 .title-about {
+  margin-bottom: 50px;
   font-weight: bold;
   font-size: 36px;
   line-height: 1.17;
@@ -109,7 +172,41 @@ body {
   letter-spacing: 0.03em;
   color: var(--color-title-page);
 }
+.list-about {
+  display: flex;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px;
+}
+.list-about .link:not(:last-child) {
+  margin-right: 30px;
+}
+.team-list {
+  display: flex;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px;
+}
+.team-list .link:not(:last-child) {
+  margin-right: 30px;
+}
 .team-title {
+  margin-bottom: 50px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--color-title-page);
+}
+.team-img {
+  margin-bottom: 30px;
+}
+
+.team-list .mini-title {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -130,6 +227,10 @@ body {
   background-color: var(--background-section);
 }
 .footer-address {
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px;
   font-style: normal;
 }
 .footer-logo {
