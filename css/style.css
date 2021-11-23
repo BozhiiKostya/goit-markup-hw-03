@@ -10,11 +10,13 @@
   --second-color-logotype: #ffffff;
   --background-section: #2f303a;
   --color-address: rgba(255, 255, 255, 0.6);
+  --border-colors-text: #eeeeee;
+  --border-colors-footer: #ececec;
 }
 body {
   font-family: roboto, sans-serif;
 }
-/* --<reset styles>-- */
+/* --------------<reset styles>-------------- */
 h1,
 h2,
 h3,
@@ -30,7 +32,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-/* --</reset styles>-- */
 .link {
   text-decoration: none;
 }
@@ -38,12 +39,19 @@ img {
   list-style: none;
 }
 /* ----------------------HEADER------------------------------ */
-.header-page .container {
-  display: flex;
+.header-page.border-footer {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--border-colors-footer);
+}
+.container {
   width: 1200px;
   margin-right: auto;
   margin-left: auto;
   padding: 0 15px;
+}
+.container.flax-box {
+  display: flex;
 }
 
 .logo {
@@ -109,16 +117,20 @@ img {
 }
 /* ----------------------HERO------------------------------ */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--background-section);
   text-align: center;
 }
 .hero .container {
   width: 696px;
-  padding: 0 15px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 .hero-title {
+  font-family: Roboto;
   margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
@@ -128,8 +140,12 @@ img {
   color: #ffffff;
 }
 .button {
+  min-width: 200px;
+  padding: 10px 32px;
+  border-radius: 4px;
+  border: none;
   font-family: Roboto;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
@@ -138,8 +154,9 @@ img {
   background-color: var(--second-color-link);
 }
 /* ----------------------MAIN------------------------------ */
-.section {
-  padding: 94px 0;
+.section-values {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .title-values {
   visibility: hidden;
@@ -156,10 +173,6 @@ img {
 }
 .list-values {
   display: flex;
-  width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 15px 94px 15px;
   font-family: Roboto;
   font-weight: normal;
   font-size: 14px;
@@ -170,11 +183,14 @@ img {
 .list-values .link:not(:last-child) {
   margin-right: 30px;
 }
+.list-values .link {
+  width: 270px;
+}
 .about-section {
   padding-bottom: 94px;
 }
 .title-about {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   font-weight: bold;
   font-size: 36px;
   line-height: 1.17;
@@ -184,26 +200,22 @@ img {
 }
 .list-about {
   display: flex;
-  width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 15px;
 }
 .list-about .link:not(:last-child) {
   margin-right: 30px;
 }
+.team-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .team-list {
   display: flex;
-  width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 15px;
 }
 .team-list .link:not(:last-child) {
   margin-right: 30px;
 }
 .team-title {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   font-weight: bold;
   font-size: 36px;
   line-height: 42px;
@@ -235,15 +247,20 @@ img {
 /* ----------------------FOOTER------------------------------ */
 .footer-page {
   background-color: var(--background-section);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer-logo {
   margin-bottom: 20px;
 }
-.footer-address {
+.footer-container {
   width: 1200px;
   margin-right: auto;
   margin-left: auto;
-  padding: 60px 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.footer-address {
   font-style: normal;
 }
 .footer-logo {
@@ -280,18 +297,14 @@ img {
   visibility: hidden;
   height: 0;
 }
-.navigation-works .container {
-  width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 0;
-  padding-right: 15px;
-  padding-left: 15px;
+.navigation-works {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .button-list {
   display: flex;
   justify-content: center;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 .button-list .link:not(:last-child) {
   margin-right: 8px;
@@ -337,4 +350,10 @@ img {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--color-text-page);
+}
+.text-content {
+  padding: 20px 24px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--border-colors-text);
 }
